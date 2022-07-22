@@ -18,7 +18,7 @@ const rootReducer = (state=initState,action)=>{
                 ...state,
                 todoList: [
                     ...state.todoList,
-                    {id: 4, name: 'C++', completed: false, priority: 'Medium'},
+                    action.payload
                 ]
             }
         default:
