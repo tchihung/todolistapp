@@ -1,12 +1,16 @@
 import { Col, Row, Input, Typography, Radio, Select, Tag } from 'antd';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { searchFilterChange } from '../../redux/action';
 
 const { Search } = Input;
 
 export default function Filters() {
+  const dispatch= useDispatch();
   const [searchText,setSearchText]= useState('');
   const handleSearchTextChange=(e)=>{
     setSearchText(e.target.value)
+    dispatch(searchFilterChange(e.target.value))
   }
   return (
     <Row justify='center'>
