@@ -10,3 +10,9 @@ export const searchFilterChange=(text)=>{
         payload: text
     }
 }
+export const statusFilterChange=(status)=>{
+    return {
+        type: 'filter/statusFilterChange',
+        payload: status
+    }
+}
